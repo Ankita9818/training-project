@@ -1,0 +1,84 @@
+.links {
+  @include link-colors(transparent,$navigation-link-color,transparent,$navigation-link-color);
+}
+
+.navigation {
+  background-color: $navigation-background-color;
+  border-bottom:none;
+  margin-bottom:0;
+  padding: 20px 0;
+
+  .navbar-nav {
+    .links {
+      a {
+        @extend .links;
+        border-bottom: 1px solid $navigation-background-color;
+        font-size: 16px;
+        margin: auto 5px;
+        text-transform: uppercase;
+        transition: .3s all ease;
+        &:hover {
+          border-bottom-color: $secondary-color;
+        }
+      }
+      .dropdown-menu {
+        li {
+          a {
+            @include link-colors(transparent,$primary-color,$primary-color, white);
+            border-bottom-color: transparent;
+          }
+        }
+      }
+    }
+    .dropdown.list-dropdown {
+      padding-bottom: 15px;
+      padding-top: 15px;
+      select {
+        background-color: $primary-color;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.icon {
+  margin: 0 5px;
+}
+
+.navbar-brand.logo {
+  @include link-colors(transparent,$navigation-link-color,transparent,$navigation-link-color);
+  font-family: $cursive-font, cursive;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+/*.carousel-indicators {
+  li.active{
+    background-color: $secondary-color;
+  }
+}*/
+
+.margin-top-90 {
+  margin-top: 90px;
+}
+/*
+
+.icons {
+  height: $icon-height;
+  width: $icon-width;
+  margin-right:10px;
+  display:inline-block;
+  vertical-align:text-top;
+}
+
+.cart-badge {
+  border-radius: 50%;
+  left:17px;
+  position: absolute;
+  top:0;
+}
+
+*/

@@ -1,0 +1,9 @@
+@mixin link-colors($background-color , $foreground-color , $hover-background-color , $hover-foreground-color) {
+  background-color:$background-color;
+  color:$foreground-color;
+
+  &:hover {
+    background-color:$hover-background-color;
+    color:$hover-foreground-color;
+  }
+}

@@ -1,0 +1,29 @@
+<%= link_to 'New Ingredient', new_admin_ingredient_url, class: 'btn btn-danger btn-site-primary text-uppercase' %>
+<h1 class="text-center text-uppercase">Ingredients</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Category</th>
+      <th>Extra Allowed</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @ingredients.each do |ingredient| %>
+      <tr>
+        <td><%= ingredient.name %></td>
+        <td><%= ingredient.price %></td>
+        <% unless ingredient.category %>
+          <td>Veg</td>
+        <% else %>
+          <td> Non-veg</td>
+        <% end %>
+        <td><%= ingredient.extra_allowed %></td>
+        <td><%= link_to 'Edit', edit_admin_ingredient_path(ingredient) %></td>
+        <td><%= link_to 'Destroy', admin_ingredient_url(ingredient), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<br>

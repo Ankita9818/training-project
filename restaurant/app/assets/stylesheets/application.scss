@@ -1,0 +1,58 @@
+/*
+ *= require jquery-ui
+ *= require bootstrap
+ *= require bootstrap.min
+ *= require_self
+ */
+ @import "main";
+
+.traversal-link {
+  a:hover {
+    color: $primary-color;
+    text-decoration: none;
+  }
+}
+
+/*.banner {
+  margin: 50px 0 0 190px;
+}
+
+.top_bar {
+  margin: 200px 0 100px 500px;
+}*/
+
+.error-explanation {
+  li {
+    color: red;
+    margin-left: 200px;
+  }
+  h2 {
+    margin-left: 190px;
+  }
+}
+
+/*.checkbox {
+  margin: 50px 0 10px 255px;
+  span {
+    margin-left: 10px;
+    font-weight: normal;
+  }
+}
+
+.current_user {
+  p {
+    color: red;
+    margin-left: 350px;
+    font-size: 30px;
+  }
+}
+
+.form-horizontal {
+  h1 {
+    margin: 0 0 50px 500px;
+  }
+}*/
+
+.container-page {
+  margin: $standard-margin auto;
+}

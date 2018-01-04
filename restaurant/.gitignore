@@ -1,0 +1,11 @@
+.byebug_history
+/.bundle
+/config/*.yml
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/log/*
+!/log/.keep
+/node_modules
+/tmp/*
+!/tmp/.keep
+/yarn-error.log

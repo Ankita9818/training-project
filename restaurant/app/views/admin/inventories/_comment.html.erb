@@ -1,0 +1,12 @@
+<% comments.each do |comment| %>
+  <div>
+    <% if comment.persisted? %>
+      <strong>
+        <%= comment.user.name.titleize %> (<%= comment.created_at.to_s(:db) %>)
+      </strong>
+      <div>
+        <%= comment.body %>
+      </div>
+    <% end %>
+  </div>
+<% end %>

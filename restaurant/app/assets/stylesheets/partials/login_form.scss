@@ -1,0 +1,50 @@
+.login-form {
+  border:none;
+  box-shadow: 0 0 15px 2px rgba(0,0,0,0.1);
+  font-size: 14px;
+  .checkbox-label {
+    color: $primary-color;
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  .panel-heading {
+    border-radius: 0px;
+    color: $primary-color;
+    font-size: 18px;
+    font-weight: 700;
+    padding-bottom: 0;
+  }
+}
+
+.form-control.form-control-input {
+  background-color: #f2f2f2;
+  border: 0;
+  color: black;
+  height: 60px;
+  outline: 0;
+  padding: 10px;
+  transition: all 1s;
+  width: 100%;
+}
+
+.form-group > .form-label-group {
+  .form-control-input {
+    position: relative;
+    &:focus + .control-label {
+      color: $secondary-color;
+      top : -6px;
+    }
+  }
+  .control-label {
+    color: $placeholder-color;
+    font-weight: normal;
+    left: 25px;
+    position: absolute;
+    text-transform: capitalize;
+    top:10px;
+    transition: 0.2s;
+    z-index: 1;
+  }
+}
+
+

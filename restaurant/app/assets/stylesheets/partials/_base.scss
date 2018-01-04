@@ -1,0 +1,16 @@
+$primary-color : #110a06;
+$secondary-color : #e78165;
+$navigation-background-color : #110a06;
+$navigation-link-color : white;
+$google-font:"Raleway";
+$base-font-size : 14px;
+$standard-margin : 120px;
+$placeholder-color : #aaa;
+$cursive-font : 'Great vibes';
+@import "mixins";
+%display-flex {
+  display:flex;
+  display:-webkit-flex;
+}
+
+/*rgb(228,60,58)rgb(157,206,57)*/

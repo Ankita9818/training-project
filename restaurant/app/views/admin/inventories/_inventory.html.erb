@@ -1,0 +1,7 @@
+<% inventories.each do |inventory| %>
+  <tr>
+    <td> <%= inventory.ingredient.name %> </td>
+    <td> <%= inventory.quantity %> </td>
+    <td><%= link_to 'Edit', edit_admin_inventory_path(inventory), class: 'btn btn-primary btn-xs' %></td>
+  </tr>
+<% end %>

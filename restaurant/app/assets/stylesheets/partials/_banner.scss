@@ -1,0 +1,57 @@
+/*.primary-banner {
+  background : $primary-color url("primary-banner-image.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  .container {
+    @extend %display-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .banner-header {
+    font-size: 74px;
+    color : $primary-color-dark;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}*/
+/*.carousel .carousel-inner .item .carousel-image {
+  height: 60vh;
+  min-height: 450px;
+  width: 100%;
+}*/
+
+.primary-banner {
+  background : url("banner-primary.jpg") no-repeat center;
+  height: 100vh;
+  position: relative;
+}
+
+.banner {
+  @extend %display-flex;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  border:1px solid black;
+  bottom: 0;
+  color: white;
+  height: 100vh;
+  justify-content: center;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  .content {
+    font-size: 16px;
+    max-width: 800px;
+    padding: 30px;
+    .logo {
+      font: 120px $cursive-font;
+    }
+  }
+}
+
+.section2 {
+  margin: $standard-margin auto;
+}
+

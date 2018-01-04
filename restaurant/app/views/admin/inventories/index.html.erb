@@ -1,0 +1,12 @@
+<strong> Location: <%= @branch.name %> </strong>
+<table class="table table-hover stock">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Quantity </th>
+      <th></th>
+    </tr>
+    <%= render partial: 'inventory', locals: { inventories: @inventories } %>
+  </thead>
+</table>
+

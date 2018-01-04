@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="panel login-form">
+      <div class="panel-heading text-center text-uppercase">
+        <%= formHeader %>
+      </div>
+      <div class="panel-body">
+        <%= form_for user, html: { class: "form-horizontal" } do |form| %>
+          <%= render 'shared/errors', model: @user %>
+          <div class="form-group">
+            <div class="col-sm-12 form-label-group" data-id="form-label-group">
+              <%= form.text_field :name, size: 40, class: 'form-control form-control-input', :'data-id'=>"form-control-input"%>
+              <%= form.label :name, "Enter your name", class: "control-label", :'data-id'=>"control-label"%>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12 form-label-group" data-id="form-label-group">
+              <% if params[:action].eql? 'edit' or params[:action].eql? 'update' %>
+                <%= form.email_field :email, size: 40, class: 'form-control form-control-input', :'data-id'=>"form-control-input", disabled: true %>
+              <% else %>
+                <%= form.email_field :email, size: 40, class: 'form-control form-control-input', :'data-id'=>"form-control-input"%>
+              <% end %>
+              <%= form.label :email, "Enter your email", class: 'control-label', :'data-id'=>"control-label" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12 form-label-group" data-id="form-label-group">
+              <%= form.password_field :password, size: 40, class: 'form-control form-control-input', :'data-id'=>"form-control-input" %>
+              <%= form.label :password, "Enter your password", class: 'control-label', :'data-id'=>"control-label" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12 form-label-group" data-id="form-label-group">
+              <%= form.password_field :password_confirmation, size: 40, class: 'form-control form-control-input', :'data-id'=>"form-control-input" %>
+              <%= form.label :password_confirmation, "Confirm your password", class: 'control-label', :'data-id'=>"control-label" %>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-12">
+              <%= form.submit submitBtnText, class: 'btn btn-danger btn-site-primary btn-lg btn-block text-uppercase' %>
+            </div>
+          </div>
+        <% end %>
+        <div class="traversal-link text-center">
+          <%= link_to 'Login?', login_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
